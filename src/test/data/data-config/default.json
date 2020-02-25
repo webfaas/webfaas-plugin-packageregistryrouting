@@ -1,0 +1,22 @@
+{
+    "core":{
+        "log":{
+            "level":"INFO"
+        }
+    },
+    "registry":{
+        "route": [
+            {
+                "scope": "scope1",
+                "registry": "registry1"
+            },
+            {
+                "scope": "scope2",
+                "registry": "registry2"
+            },
+            {
+                "test": "test"
+            }
+        ]
+    }
+}
