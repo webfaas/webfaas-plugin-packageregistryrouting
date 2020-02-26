@@ -9,16 +9,17 @@ WebFaaS Plugin for [node](http://nodejs.org).
 ### Config
 ```json
 {
-    "registry.routing": [
+    "registry.route": [
         {
-            "name": "[registry name]",
-            "slaveName": "[registry slave name]",
-            "token": "[token npm]",
-            "url": "[url npm]"
+            "scope": "scope1",
+            "registry": "npm"
+        },
+        {
+            "scope": "scope2",
+            "registry": "github"
         }
     ]
 }
-
 ```
 
 ### Example
