@@ -5,7 +5,7 @@ import { IPackageRegistry, Core } from "@webfaas/webfaas-core";
 import WebFassPlugin from "../lib/WebFassPlugin";
 
 const core = new Core();
-const registryManager = core.getModuleManager().getPackageStoreManager().getPackageRegistryManager();
+const registryManager = core.getModuleManager().getModuleManagerImport().getPackageStoreManager().getPackageRegistryManager();
 
 export class PackageRegistryCustom implements IPackageRegistry {
     private name: string;

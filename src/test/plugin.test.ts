@@ -23,7 +23,7 @@ describe("Plugin", () => {
         let core2 = new Core();
         let plugin2 = new WebFassPlugin(core2);
         core2.getLog().changeCurrentLevel(LogLevelEnum.OFF);
-        chai.expect(core2.getModuleManager().getPackageStoreManager().getPackageRegistryManager().getRegistryNameByExternalRouting("@scope1/module1")).to.eq("registry1");
-        chai.expect(core2.getModuleManager().getPackageStoreManager().getPackageRegistryManager().getRegistryNameByExternalRouting("@scope2/module1")).to.eq("registry2");
+        chai.expect(core2.getModuleManager().getModuleManagerImport().getPackageStoreManager().getPackageRegistryManager().getRegistryNameByExternalRouting("@scope1/module1")).to.eq("registry1");
+        chai.expect(core2.getModuleManager().getModuleManagerImport().getPackageStoreManager().getPackageRegistryManager().getRegistryNameByExternalRouting("@scope2/module1")).to.eq("registry2");
     })
 })

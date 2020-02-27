@@ -28,7 +28,7 @@ export default class WebFassPlugin implements IPlugin {
         }
         
         let self = this;
-        core.getModuleManager().getPackageStoreManager().getPackageRegistryManager().getRegistryNameByExternalRouting = function(moduleName: string): string {
+        core.getModuleManager().getModuleManagerImport().getPackageStoreManager().getPackageRegistryManager().getRegistryNameByExternalRouting = function(moduleName: string): string {
             return self.packageRegistryRouting.getRegistryNameByExternalRouting(moduleName);
         }
     }
