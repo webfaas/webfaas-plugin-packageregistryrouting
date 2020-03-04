@@ -1,11 +1,10 @@
 import * as chai from "chai";
-import * as mocha from "mocha";
 import { PackageRegistryRouting } from "../lib/PackageRegistryRouting";
 import { IPackageRegistry, Core } from "@webfaas/webfaas-core";
 import WebFassPlugin from "../lib/WebFassPlugin";
 
 const core = new Core();
-const registryManager = core.getModuleManager().getModuleManagerImport().getPackageStoreManager().getPackageRegistryManager();
+const registryManager = core.getPackageRegistryManager();
 
 export class PackageRegistryCustom implements IPackageRegistry {
     private name: string;
